@@ -39,10 +39,10 @@ rescue
   err = "#{$!}"
   CheckErrors.handle_errors(err)
 end
-
+mode = %w(dev prod)
 user = CONFIG['user']
 password = CONFIG['password']
-url = CONFIG['aspace']['dev']
+url = CONFIG['aspace'][mode[0]]
 login = "/users/#{user}/login"
 resource = "repositories/#{@repo_id}/resources/marc21/#{@resource_id}.xml"
 aspace_session = Session.new(url,password,resource,login)
