@@ -9,7 +9,7 @@ module CheckErrors
   def check_arguments(args)
     size = 2
     msg = "\nNumber of arguments must be 2\n"
-    usage = "\nUsage: #{$0} repository_id resource_id\n"
+    usage = "\nUsage: ruby #{$0} repository_id resource_id\n"
     handle_errors(msg+usage) unless args.size == 2
   end
 end
