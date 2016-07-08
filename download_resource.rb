@@ -33,7 +33,7 @@ end
 LOG = Logger.new(STDOUT)
 CheckErrors.check_arguments(ARGV)
 begin
-  config_file = "config.yml"
+  config_file = "/opt/config.yml"
   CONFIG = YAML.load_file(config_file)
 rescue
   err = "#{$!}"
