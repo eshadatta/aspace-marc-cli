@@ -26,11 +26,13 @@ class Session
     end
   end
 
-  private    
+  private
   def aspace_connect
     Faraday.new(:url => @url) do |req|
+      req.options.timeout = 3600
       req.request :url_encoded
       req.adapter :net_http
+
     end
   end
 
