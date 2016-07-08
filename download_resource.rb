@@ -10,7 +10,7 @@ require_relative 'lib/check_errors'
 include CheckErrors
 
 def download(rec)
-    filename = "#{@resource_id}_marc.xml"
+    filename = "#{CONFIG['path']}/#{@repo_id}_#{@resource_id}_marc.xml"
     begin
       LOG.info("Resource #{@resource_id} found")
       File.delete(filename) if File.exist?(filename)
