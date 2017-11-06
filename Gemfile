@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'faraday', '~>0.9'
+gem 'archivesspace-client', '~> 0.1.2'
 gem 'pry'
-gem 'multi_json'
